@@ -1,8 +1,26 @@
 import Vue from 'vue'
-import App from './App'
+import VueRouter from 'vue-router'
+import { configRouter } from './router-config'
+import { sync } from 'vuex-router-sync'
+import store from './vuex/store'
+import App from './App.vue'
+require('es6-promise').polyfill()
+require('isomorphic-fetch')
 
-/* eslint-disable no-new */
-new Vue({
-  el: 'body',
-  components: { App },
+Vue.use(VueRouter)
+
+const router = new VueRouter({
+  // root: '/v_cms',
+  history: true,
+  saveScrollPosition: false,
 })
+
+configRouter(router)
+
+// keep vue-router and vuex store in sync
+sync(store, router)
+
+router.start(App, '#app')
+
+// just for debugging
+window.router = router
