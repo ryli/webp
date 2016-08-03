@@ -20,13 +20,13 @@
 
     <actionsheet :menus="menus" :show.sync="showMenus" show-cancel></actionsheet>
 
-    <p class="home-content">Home</p>
+    <div class="home-content">
+      Home
   </div>
 </template>
 
 <script>
-import XHeader from 'vux-components/x-header'
-import { Actionsheet } from 'vux-components/'
+import { Actionsheet, XHeader, Cell, Group } from 'vux-components/'
 
 export default {
   name: 'Home',
@@ -34,6 +34,8 @@ export default {
   components: {
     XHeader,
     Actionsheet,
+    Cell,
+    Group,
   },
 
   data () {
@@ -59,7 +61,7 @@ export default {
 
 <style>
 .home-content {
-  background-color: #59a;
+  background-color: #ebebeb;
   height: 1000px;
 }
 </style>
