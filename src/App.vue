@@ -7,19 +7,19 @@
 
     <div class="footer-tabbar">
       <tabbar>
-        <tabbar-item selected link="/home">
+        <tabbar-item :selected="$route.path.indexOf('/home') === 0" link="/home">
           <img slot="icon" src="https://o84lhz5xo.qnssl.com/master/src/assets/demo/icon_nav_button.png">
           <span slot="label">Home</span>
         </tabbar-item>
-        <tabbar-item show-dot link="/news">
+        <tabbar-item :selected="$route.path.indexOf('/news') === 0" show-dot link="/news">
           <img slot="icon" src="https://o84lhz5xo.qnssl.com/master/src/assets/demo/icon_nav_msg.png">
           <span slot="label">News</span>
         </tabbar-item>
-        <tabbar-item link="/hello">
+        <tabbar-item :selected="$route.path.indexOf('/hello') === 0" link="/hello">
           <img slot="icon" src="https://o84lhz5xo.qnssl.com/master/src/assets/demo/icon_nav_article.png">
           <span slot="label">Hello</span>
         </tabbar-item>
-        <tabbar-item link="/about">
+        <tabbar-item :selected="$route.path.indexOf('/about') === 0" link="/about">
           <img slot="icon" src="https://o84lhz5xo.qnssl.com/master/src/assets/demo/icon_nav_cell.png">
           <span slot="label">About</span>
         </tabbar-item>
@@ -81,6 +81,11 @@ export default {
 .weui_tabbar_item.weui_bar_item_on .weui_tabbar_icon img {
   filter: initial;
   -webkit-filter: initial;
+}
+
+/* icon */
+.weui_icon.icon_md:before {
+    font-size: 60px;
 }
 
 </style>
