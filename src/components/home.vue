@@ -21,12 +21,22 @@
     <actionsheet :menus="menus" :show.sync="showMenus" show-cancel></actionsheet>
 
     <div class="home-content">
-      Home
+
+      Value: {{ count }}
+      <button @click="increment"> + </button>
+      <button @click="decrement"> - </button>
+      <button @click="incrementIfOdd"> + if odd </button>
+      <button @click="incrementAsync"> + async </button>
+      <div>
+        <div>Recent History: {{ recentHistory }}</div>
+      </div>
   </div>
 </template>
 
 <script>
 import { Actionsheet, XHeader, Cell, Group } from 'vux-components/'
+import { increment, decrement, incrementIfOdd, incrementAsync } from '../vuex/actions'
+import { recentHistory } from '../vuex/getters'
 
 export default {
   name: 'Home',
@@ -45,6 +55,19 @@ export default {
         show1: 'Choose from photos'
       },
       showMenus: false
+    }
+  },
+
+  vuex: {
+    getters: {
+      count: state => state.count,
+      recentHistory
+    },
+    actions: {
+      increment,
+      decrement,
+      incrementIfOdd,
+      incrementAsync
     }
   },
 
