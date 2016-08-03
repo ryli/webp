@@ -36,7 +36,7 @@ export default {
     Actionsheet,
   },
 
-  data() {
+  data () {
     return {
       menus: {
         menu1: 'Take Photo',
@@ -47,10 +47,10 @@ export default {
   },
 
   methods: {
-    clickBack() {
+    clickBack () {
       console.log(1)
     },
-    clickMore() {
+    clickMore () {
       console.log(2)
     },
   },

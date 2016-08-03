@@ -5,7 +5,7 @@
       <router-view transition="fade" transition-mode="out-in" ></router-view>
     </div>
 
-    <div class="footer-tabbar">
+    <div class="footer-tabbar" v-show="showFooterTabbar">
       <tabbar>
         <tabbar-item :selected="$route.path.indexOf('/home') === 0" link="/home">
           <img slot="icon" src="https://o84lhz5xo.qnssl.com/master/src/assets/demo/icon_nav_button.png">
@@ -38,7 +38,7 @@ import { Tabbar, TabbarItem } from 'vux-components/tabbar'
 export default {
   name: 'app',
 
-  data() {
+  data () {
     return {
       authenticating: false,
       icons: '',
@@ -46,6 +46,16 @@ export default {
   },
 
   store,
+
+  computed: {
+    showFooterTabbar () {
+      const routeList = ['/login']
+      const path = this.$route.path
+      return routeList.some((item) => {
+        return path.indexOf(item) !== 0
+      })
+    },
+  },
 
   components: {
     Group,
@@ -59,6 +69,7 @@ export default {
 
 <style>
 @import '~vux/dist/vux.css';
+@import '//buding-img.b0.upaiyun.com/static/css/lib.css';
 
 /* vue transition */
 .fade-transition {

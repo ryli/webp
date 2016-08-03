@@ -30,29 +30,29 @@ export default {
     Group,
     Switch,
     Alert,
-    Confirm
+    Confirm,
   },
 
-  data() {
+  data () {
     return {
       show: false,
-      show1: false
+      show1: false,
     }
   },
 
   methods: {
-    onShow() {
+    onShow () {
       console.log('show')
     },
-    onHide() {
+    onHide () {
       console.log('hide')
     },
-    onConfirm() {
+    onConfirm () {
       console.log('confirm')
     },
-    onCancel() {
+    onCancel () {
       console.log('cancel')
-    }
+    },
   },
 }
 </script>

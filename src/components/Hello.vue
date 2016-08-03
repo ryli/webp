@@ -1,29 +1,32 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <img v-for="(index, item) in list" :src="item.src" @click="$refs.previewer.show(index)" width="100" alt="" class="previewer-demo-img" />
+    <img v-for="(index, item) in list" :src="item.src" @click="$refs.previewer.show(index)" width="100" alt="" class="previewer-img" style="display: none;" />
+
+    <x-button type="primary" @click="$refs.previewer.show(0)">查看图片</x-button>
 
     <previewer :list="list" :options="options" v-ref:previewer></previewer>
 
-    <p>
+    <pre>
       PhotoSwipe
       this.photoswipe && this.photoswipe.destroy() 报错
       Uncaught TypeError: Cannot read property 'destroy' of null
-    </p>
+    </pre>
   </div>
 </template>
 
 <script>
-import { Previewer } from 'vux-components'
+import { Previewer, XButton } from 'vux-components'
 
 export default {
   name: 'Hello',
 
   components: {
     Previewer,
+    XButton,
   },
 
-  data() {
+  data () {
     return {
       msg: 'Hello World!',
       list: [
@@ -39,9 +42,9 @@ export default {
         },
       ],
       options: {
-        getThumbBoundsFn(index) {
+        getThumbBoundsFn (index) {
           // find thumbnail element
-          const thumbnail = document.querySelectorAll('.previewer-demo-img')[index]
+          const thumbnail = document.querySelectorAll('.previewer-img')[index]
           // get window scroll Y
           const pageYScroll = window.pageYOffset || document.documentElement.scrollTop
           // optionally get horizontal scroll

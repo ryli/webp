@@ -13,8 +13,10 @@ module.exports = {
   "rules": {
     "semi": [2, "never"],
     "import/no-unresolved": 0,
+    "space-before-function-paren" : ["error", "always"],
     "func-names": "off",
     "global-require": "off",
+    "arrow-body-style": "off",
     // "comma-dangle": "off",
     "no-new": "off",
     "no-param-reassign": ["error", { "props": false }],
