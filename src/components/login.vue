@@ -4,7 +4,7 @@
     <group class="auto">
       <x-input placeholder="登录账号"></x-input>
       <x-input placeholder="密码"></x-input>
-       <x-input :min="4" :max="4" title="验证码" class="weui_vcode">
+       <x-input :min="4" :max="4" placeholder="验证码" class="weui_vcode">
         <img slot="right" src="http://weui.github.io/weui/images/vcode.jpg">
       </x-input>
     </group>
