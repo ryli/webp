@@ -7,21 +7,21 @@
 
     <div class="footer-tabbar">
       <tabbar>
-        <tabbar-item selected link="/hello">
-          <img slot="icon" :src="icons">
-          <span slot="label">Wechat</span>
+        <tabbar-item selected link="/home">
+          <img slot="icon" src="https://o84lhz5xo.qnssl.com/master/src/assets/demo/icon_nav_button.png">
+          <span slot="label">Home</span>
         </tabbar-item>
-        <tabbar-item show-dot link="/login">
+        <tabbar-item show-dot link="/news">
           <img slot="icon" src="https://o84lhz5xo.qnssl.com/master/src/assets/demo/icon_nav_msg.png">
-          <span slot="label">Message</span>
-        </tabbar-item>
-        <tabbar-item>
-          <img slot="icon" src="https://o84lhz5xo.qnssl.com/master/src/assets/demo/icon_nav_article.png">
-          <span slot="label">Explore</span>
-        </tabbar-item>
-        <tabbar-item>
-          <img slot="icon" src="https://o84lhz5xo.qnssl.com/master/src/assets/demo/icon_nav_cell.png">
           <span slot="label">News</span>
+        </tabbar-item>
+        <tabbar-item link="/hello">
+          <img slot="icon" src="https://o84lhz5xo.qnssl.com/master/src/assets/demo/icon_nav_article.png">
+          <span slot="label">Hello</span>
+        </tabbar-item>
+        <tabbar-item link="/about">
+          <img slot="icon" src="https://o84lhz5xo.qnssl.com/master/src/assets/demo/icon_nav_cell.png">
+          <span slot="label">About</span>
         </tabbar-item>
       </tabbar>
     </div>
@@ -41,7 +41,7 @@ export default {
   data() {
     return {
       authenticating: false,
-      icons: 'https://o84lhz5xo.qnssl.com/master/src/assets/demo/icon_nav_button.png',
+      icons: '',
     }
   },
 
@@ -68,6 +68,12 @@ export default {
   opacity: 0;
 }
 
+/* vux: tabbar */
+.footer-tabbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
 .weui_tabbar_icon img {
   filter: grayscale(1);
   -webkit-filter: grayscale(1);

@@ -6,6 +6,24 @@ export function configRouter(router) {
       },
     },
 
+    '/home': {
+      component(resolve) {
+        require(['./components/home.vue'], resolve)
+      },
+    },
+
+    '/news': {
+      component(resolve) {
+        require(['./components/news.vue'], resolve)
+      },
+    },
+
+    '/about': {
+      component(resolve) {
+        require(['./components/about.vue'], resolve)
+      },
+    },
+
     '/login': {
       component(resolve) {
         require(['./components/login.vue'], resolve)
