@@ -30,13 +30,13 @@ export default {
     Group,
     Switch,
     Alert,
-    Confirm,
+    Confirm
   },
 
   data () {
     return {
       show: false,
-      show1: false,
+      show1: false
     }
   },
 
@@ -52,7 +52,7 @@ export default {
     },
     onCancel () {
       console.log('cancel')
-    },
-  },
+    }
+  }
 }
 </script>

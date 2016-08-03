@@ -35,16 +35,16 @@ export default {
     XHeader,
     Actionsheet,
     Cell,
-    Group,
+    Group
   },
 
   data () {
     return {
       menus: {
         menu1: 'Take Photo',
-        show1: 'Choose from photos',
+        show1: 'Choose from photos'
       },
-      showMenus: false,
+      showMenus: false
     }
   },
 
@@ -54,8 +54,8 @@ export default {
     },
     clickMore () {
       console.log(2)
-    },
-  },
+    }
+  }
 }
 </script>
 

@@ -41,7 +41,7 @@ export default {
   data () {
     return {
       authenticating: false,
-      icons: '',
+      icons: ''
     }
   },
 
@@ -54,15 +54,15 @@ export default {
       return routeList.some((item) => {
         return path.indexOf(item) !== 0
       })
-    },
+    }
   },
 
   components: {
     Group,
     Cell,
     Tabbar,
-    TabbarItem,
-  },
+    TabbarItem
+  }
 
 }
 </script>

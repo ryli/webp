@@ -23,7 +23,7 @@ export default {
 
   components: {
     Previewer,
-    XButton,
+    XButton
   },
 
   data () {
@@ -33,13 +33,13 @@ export default {
         {
           src: 'https://placekitten.com/600/400',
           w: 600,
-          h: 400,
+          h: 400
         },
         {
           src: 'https://placekitten.com/1200/900',
           w: 1200,
-          h: 900,
-        },
+          h: 900
+        }
       ],
       options: {
         getThumbBoundsFn (index) {
@@ -54,10 +54,10 @@ export default {
           return { x: rect.left, y: rect.top + pageYScroll, w: rect.width }
           // Good guide on how to get element coordinates:
           // http://javascript.info/tutorial/coordinates
-        },
-      },
+        }
+      }
     }
-  },
+  }
 }
 </script>
 

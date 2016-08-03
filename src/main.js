@@ -12,7 +12,7 @@ Vue.use(VueRouter)
 const router = new VueRouter({
   // root: '/v_cms',
   history: true,
-  saveScrollPosition: false,
+  saveScrollPosition: false
 })
 
 configRouter(router)

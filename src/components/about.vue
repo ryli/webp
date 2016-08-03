@@ -31,18 +31,18 @@ import Switch from 'vux-components/switch'
 import Popup from 'vux-components/popup'
 
 export default {
-  data() {
+  data () {
     return {
       show: false,
-      show1: false,
+      show1: false
     }
   },
 
   components: {
     Group,
     Switch,
-    Popup,
-  },
+    Popup
+  }
 }
 </script>
 

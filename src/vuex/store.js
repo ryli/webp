@@ -7,12 +7,12 @@ Vue.use(Vuex)
 const state = {
   user_name: 'ELEVEN',
   count: 0,
-  history: [],
+  history: []
 }
 
 const store = new Vuex.Store({
   state,
-  mutations,
+  mutations
 })
 
 export default store

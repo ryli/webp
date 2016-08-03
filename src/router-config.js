@@ -1,45 +1,45 @@
-export function configRouter(router) {
+export function configRouter (router) {
   router.map({
     '/hello': {
-      component(resolve) {
+      component (resolve) {
         require(['./components/hello.vue'], resolve)
-      },
+      }
     },
 
     '/home': {
-      component(resolve) {
+      component (resolve) {
         require(['./components/home.vue'], resolve)
-      },
+      }
     },
 
     '/news': {
-      component(resolve) {
+      component (resolve) {
         require(['./components/news.vue'], resolve)
-      },
+      }
     },
 
     '/about': {
-      component(resolve) {
+      component (resolve) {
         require(['./components/about.vue'], resolve)
-      },
+      }
     },
 
     '/login': {
-      component(resolve) {
+      component (resolve) {
         require(['./components/login.vue'], resolve)
-      },
+      }
     },
 
     // not found handler
     '*': {
-      component: require('./components/not-found.vue'),
-    },
+      component: require('./components/not-found.vue')
+    }
 
   })
 
   router.redirect({
     '/': '/hello',
-    '/index.html': '/hello',
+    '/index.html': '/hello'
   })
 
   /* router.beforeEach((transition) => {

@@ -27,15 +27,15 @@ export default {
     Group,
     XInput,
     XButton,
-    Cell,
+    Cell
   },
 
   data () {
     return {
       user_name: '',
-      password: '',
+      password: ''
     }
-  },
+  }
 }
 </script>
 
