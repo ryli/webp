@@ -1,23 +1,28 @@
 <template>
   <div>
-    <group>
-      <switch :value.sync="show" title="Toggle alert"></switch>
-      <switch :value.sync="show1" title="Toggle confirm"></switch>
-    </group>
+    <x-header :right-options="{showMore: true}" :left-options="{showBack: true}" class="page-header primary-header">News</x-header>
 
-    <alert :show.sync="show" @on-show="onShow" @on-hide="onHide" title="微车提示" button-text="确定">
-      <p>网络不给力，请稍后重试~</p>
-    </alert>
+    <div class="page-content">
+      <group>
+        <switch :value.sync="show" title="Toggle alert"></switch>
+        <switch :value.sync="show1" title="Toggle confirm"></switch>
+      </group>
 
-    <confirm :show.sync="show1" @on-confirm="onConfirm" @on-cancel="onCancel" title="微车提示" confirm-text="确定" cancel-text="取消">
-      <p>确定删除内容？</p>
-    </confirm>
+      <alert :show.sync="show" @on-show="onShow" @on-hide="onHide" title="微车提示" button-text="确定">
+        <p>网络不给力，请稍后重试~</p>
+      </alert>
 
-    <p>News</p>
+      <confirm :show.sync="show1" @on-confirm="onConfirm" @on-cancel="onCancel" title="微车提示" confirm-text="确定" cancel-text="取消">
+        <p>确定删除内容？</p>
+      </confirm>
+
+    </div>
+
   </div>
 </template>
 
 <script>
+import XHeader from 'vux-components/x-header'
 import Group from 'vux-components/group'
 import Switch from 'vux-components/switch'
 import Alert from 'vux-components/alert'
@@ -27,6 +32,7 @@ export default {
   name: 'News',
 
   components: {
+    XHeader,
     Group,
     Switch,
     Alert,

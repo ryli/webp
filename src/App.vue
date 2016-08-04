@@ -74,7 +74,8 @@ export default {
 @base-gray: #f5f5f5;
 @base-info-gray: #555;
 
-.primary-header.primary-header {
+.primary-header.primary-header,
+.container .weui_btn_primary {
   background-color: @base-green;
 }
 .vux-header.primary-header .vux-header-left a,

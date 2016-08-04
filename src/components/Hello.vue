@@ -1,21 +1,26 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <img v-for="(index, item) in list" :src="item.src" @click="$refs.previewer.show(index)" width="100" alt="" class="previewer-img" style="display: none;" />
+  <div>
+    <x-header :right-options="{showMore: true}" :left-options="{showBack: true}" class="page-header primary-header">Hello</x-header>
 
-    <x-button type="primary" @click="$refs.previewer.show(0)">查看图片</x-button>
+    <div class="page-content">
+      <h1>{{ msg }}</h1>
+      <img v-for="(index, item) in list" :src="item.src" @click="$refs.previewer.show(index)" width="100" alt="" class="previewer-img" style="display: none;" />
 
-    <previewer :list="list" :options="options" v-ref:previewer></previewer>
+      <x-button type="primary" @click="$refs.previewer.show(0)">查看图片0</x-button>
+      <x-button type="warn" @click="$refs.previewer.show(1)">查看图片1</x-button>
 
-    <pre>
-      PhotoSwipe
+      <previewer :list="list" :options="options" v-ref:previewer></previewer>
+
+      <!-- PhotoSwipe
       this.photoswipe && this.photoswipe.destroy() 报错
-      Uncaught TypeError: Cannot read property 'destroy' of null
-    </pre>
+      Uncaught TypeError: Cannot read property 'destroy' of null -->
+    </div>
+
   </div>
 </template>
 
 <script>
+import XHeader from 'vux-components/x-header'
 import XButton from 'vux-components/x-button'
 import Previewer from 'vux-components/previewer'
 
@@ -23,6 +28,7 @@ export default {
   name: 'Hello',
 
   components: {
+    XHeader,
     Previewer,
     XButton
   },
