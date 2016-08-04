@@ -14,6 +14,7 @@
       <p class="f12 c9 tac">如登录遇到问题，请联系微车服务人员。</p>
     </div>
 
+    <loading :show="showLoading" :text="loadingText"></loading>
   </div>
 </template>
 
@@ -22,6 +23,7 @@ import Group from 'vux-components/group'
 import XInput from 'vux-components/x-input'
 import XButton from 'vux-components/x-button'
 import Cell from 'vux-components/cell'
+import Loading from 'vux-components/loading'
 
 export default {
   name: 'Login',
@@ -30,19 +32,26 @@ export default {
     Group,
     XInput,
     XButton,
-    Cell
+    Cell,
+    Loading
   },
 
   data () {
     return {
       user_name: '',
-      password: ''
+      password: '',
+      showLoading: false,
+      loadingText: '加载中'
     }
   },
 
   methods: {
     login () {
-      this.$router.go('/home')
+      this.showLoading = true
+      setTimeout(() => {
+        this.showLoading = false
+        this.$router.go('/home')
+      }, 2000)
     }
   }
 }
