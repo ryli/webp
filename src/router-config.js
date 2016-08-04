@@ -38,8 +38,8 @@ export function configRouter (router) {
   })
 
   router.redirect({
-    '/': '/hello',
-    '/index.html': '/hello'
+    '/': '/home',
+    '/index.html': '/home'
   })
 
   /* router.beforeEach((transition) => {

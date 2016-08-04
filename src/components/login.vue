@@ -10,7 +10,7 @@
     </group>
 
     <div class="p15">
-      <x-button type="primary" class="mt15 mb10">登录</x-button>
+      <x-button type="primary" @click="login" class="mt15 mb10">登录</x-button>
       <p class="f12 c9 tac">如登录遇到问题，请联系微车服务人员。</p>
     </div>
 
@@ -18,7 +18,10 @@
 </template>
 
 <script>
-import { Group, XInput, XButton, Cell } from 'vux-components'
+import Group from 'vux-components/group'
+import XInput from 'vux-components/x-input'
+import XButton from 'vux-components/x-button'
+import Cell from 'vux-components/cell'
 
 export default {
   name: 'Login',
@@ -34,6 +37,12 @@ export default {
     return {
       user_name: '',
       password: ''
+    }
+  },
+
+  methods: {
+    login () {
+      this.$router.go('/home')
     }
   }
 }

@@ -16,7 +16,8 @@
 </template>
 
 <script>
-import { Previewer, XButton } from 'vux-components'
+import XButton from 'vux-components/x-button'
+import Previewer from 'vux-components/previewer'
 
 export default {
   name: 'Hello',
