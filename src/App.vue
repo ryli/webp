@@ -74,7 +74,7 @@ export default {
 
 <style>
 @import '~vux/dist/vux.css';
-@import '//buding-img.b0.upaiyun.com/static/css/lib.css';
+@import './styles/lib.css';
 
 /* vue transition */
 .fade-transition {
